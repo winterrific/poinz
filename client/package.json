@@ -1,14 +1,14 @@
 {
   "name": "poinz-client",
-  "version": "0.20.3",
-  "description": "Distributed Planning Poker",
+  "version": "0.20.5",
+  "description": "Distributed Planning Poker - Credits to Zuehlke/poinz",
   "private": true,
-  "author": "xeronimus@gmail.com",
+  "author": "ruben@winterrific.net",
   "license": "MIT",
-  "homepage": "https://github.com/Zuehlke/poinz",
+  "homepage": "https://github.com/winterrific/poinz",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Zuehlke/poinz.git"
+    "url": "https://github.com/winterrific/poinz.git"
   },
   "scripts": {
     "start": "npm run serve",
@@ -86,6 +86,6 @@
     "webpack-dev-server": "4.15.1"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   }
 }
