@@ -1,6 +1,6 @@
 ### 0.20.5: 2024-12-21
 
-* Move this Changelog in modal
+* Move this Changelog to help section only
 * Changed some german wording
 
 ### 0.20.4: 2024-12-18
