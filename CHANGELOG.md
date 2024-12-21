@@ -1,3 +1,13 @@
+### 0.20.5: 2024-12-21
+
+* Move this Changelog in modal
+* Changed some german wording
+
+### 0.20.4: 2024-12-18
+
+* Update dependencies
+ * Migrage ESLint configurations
+
 ### 0.20.3: 2023-10-14
 
 * Small improvements in app status page
