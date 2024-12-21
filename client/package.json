@@ -1,14 +1,14 @@
 {
   "name": "poinz-client",
-  "version": "0.20.3",
-  "description": "Distributed Planning Poker",
+  "version": "0.20.5",
+  "description": "Distributed Planning Poker - Credits to Zuehlke/poinz",
   "private": true,
-  "author": "xeronimus@gmail.com",
+  "author": "ruben@winterrific.net",
   "license": "MIT",
-  "homepage": "https://github.com/Zuehlke/poinz",
+  "homepage": "https://github.com/winterrific/poinz",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Zuehlke/poinz.git"
+    "url": "https://github.com/winterrific/poinz.git"
   },
   "scripts": {
     "start": "npm run serve",
@@ -65,6 +65,8 @@
     "@babel/core": "7.26.0",
     "@babel/preset-env": "7.26.0",
     "@babel/preset-react": "7.26.3",
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.17.0",
     "@quickbaseoss/babel-plugin-styled-components-css-namespace": "1.0.1",
     "babel-jest": "29.7.0",
     "babel-loader": "9.2.1",
@@ -73,9 +75,12 @@
     "css-loader": "7.1.2",
     "cypress": "13.17.0",
     "date-fns": "2.30.0",
-    "eslint": "8.51.0",
+    "eslint": "^9.17.0",
+    "eslint-plugin-cypress": "^4.1.0",
+    "eslint-plugin-jest": "^28.10.0",
     "eslint-plugin-react": "7.37.2",
     "file-loader": "6.2.0",
+    "globals": "^15.14.0",
     "jest": "29.7.0",
     "react-test-renderer": "18.2.0",
     "style-loader": "3.3.3",
@@ -86,6 +91,6 @@
     "webpack-dev-server": "4.15.1"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   }
 }

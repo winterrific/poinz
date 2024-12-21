@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import {L10nContext} from '../../services/l10n';
 import {joinIfReady} from '../../state/actions/commandActions';
 import {USERNAME_REGEX} from '../frontendInputValidation';
-import GithubRibbon from './GithubRibbon';
 
 import {
   StyledEyecatcher,
@@ -25,7 +24,6 @@ const WhoAreYou = ({joinIfReady}) => {
 
   return (
     <StyledLanding>
-      <GithubRibbon />
       <StyledLandingInner>
         <StyledEyecatcher>
           <StyledInfoText>
@@ -41,7 +39,7 @@ const WhoAreYou = ({joinIfReady}) => {
               placeholder={t('name')}
               value={myUsername}
               onChange={onUsernameChange}
-              onKeyPress={onUsernameKeyPress}
+              onKeyDown={onUsernameKeyPress}
             />
 
             <button

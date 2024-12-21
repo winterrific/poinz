@@ -89,8 +89,7 @@ const AppStatus = () => {
             onClick={onPrevClick}
             disabled={roomsPage <= 1}
           >
-            <i className="icon-left-big button-icon-left"></i>
-            PREV
+            <i className="icon-left-big button-icon-left"></i> PREV
           </button>
 
           <div>
