@@ -39,7 +39,7 @@ const WhoAreYou = ({joinIfReady}) => {
               placeholder={t('name')}
               value={myUsername}
               onChange={onUsernameChange}
-              onKeyPress={onUsernameKeyPress}
+              onKeyDown={onUsernameKeyPress}
             />
 
             <button
