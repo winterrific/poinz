@@ -1,4 +1,4 @@
-const fsampleStory = {
+const sampleStory = {
   title: 'Welcome to your Poinz room!',
   description: `This is a sample story that we already created for you.
 

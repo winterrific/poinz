@@ -1,6 +1,6 @@
 {
   "name": "poinz",
-  "version": "0.20.5",
+  "version": "0.20.6",
   "description": "Distributed Planning Poker - Credits to Zuehlke/poinz",
   "private": true,
   "author": "ruben@winterrific.net",
@@ -30,7 +30,7 @@
     "ejs": "^3.1.10",
     "fs-extra": "11.2.0",
     "glob": "^11.0.0",
-    "npm-check-updates": "17.1.12",
+    "npm-check-updates": "17.1.13",
     "prettier": "3.4.2",
     "@mermaid-js/mermaid-cli": "^11.4.2"
   },
