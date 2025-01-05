@@ -177,7 +177,7 @@ const RoomSettings = ({
             placeholder={t('issueTrackingUrlExample')}
             value={myIssueTrackingUrl}
             onChange={(e) => setMyIssueTrackingUrl(e.target.value)}
-            onKeyPress={onIssueTrackingUrlKeyPress}
+            onKeyDown={onIssueTrackingUrlKeyPress}
           />
 
           <button

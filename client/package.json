@@ -1,6 +1,6 @@
 {
   "name": "poinz-client",
-  "version": "0.20.5",
+  "version": "0.20.6",
   "description": "Distributed Planning Poker - Credits to Zuehlke/poinz",
   "private": true,
   "author": "ruben@winterrific.net",
@@ -58,7 +58,7 @@
     "remark-gfm": "^4.0.0",
     "reselect": "4.1.8",
     "socket.io-client": "4.8.1",
-    "styled-components": "6.1.13",
+    "styled-components": "6.1.14",
     "whatwg-fetch": "^3.6.20"
   },
   "devDependencies": {

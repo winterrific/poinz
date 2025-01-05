@@ -8,6 +8,6 @@ const sampleStory = {
 
 Please note: If a Poinz room is unused for more than two months, it will get deleted automatically!
 
-For more information, refer to the manual https://github.com/Zuehlke/poinz/blob/master/docu/manual.md`
+For more information, refer to the manual https://github.com/winterrific/poinz/blob/master/docu/manual.md`
 };
 export default sampleStory;

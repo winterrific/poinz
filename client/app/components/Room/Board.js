@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import {useDragLayer} from 'react-dnd';
 
 import Help from '../Help/Help';
-import FeedbackHint from './FeedbackHint';
 import EstimationArea from '../EstimationArea/EstimationArea';
 import Settings from '../Settings/Settings';
 import Users from '../Users/Users';
@@ -56,8 +55,6 @@ const Board = ({roomId, isAStorySelected, sidebarShown, matrixShown, toggleMatri
       <ActionLog />
       <Help />
     </StyledSidebarRight>
-
-    <FeedbackHint />
   </StyledBoard>
 );
 
