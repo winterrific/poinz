@@ -17,13 +17,13 @@ const FeedbackHint = ({hintsHidden, hideNewUserHints}) => {
       <i className="icon-cancel hide-hints" onClick={() => hideNewUserHints()}></i>
       <div style={{width: '45px'}}>
         <Avatar
-          user={{email: 'set@zuehlke.com', emailHash: 'd2bb0fb7ae7e208f0a2384ec08d708ef'}}
+          user={{email: 'ruben@winterrific.net', emailHash: '40e0b3663ee7891194258415c3dff4bcf2ecdbe1d9fac95fc8c9d0cb1469bced'}}
           index={0}
         />
       </div>
       <div>
         Hey there! Do you use Poinz on a regular basis? I would be very interested in your{' '}
-        <a href="https://github.com/Zuehlke/poinz/issues" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/winterrific/poinz/issues" target="_blank" rel="noopener noreferrer">
           feedback!
         </a>
       </div>
