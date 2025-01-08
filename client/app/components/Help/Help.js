@@ -24,23 +24,12 @@ const Help = ({shown}) => {
           <h5>User manual & Feedback</h5>
           If you need help, please checkout the{' '}
           <a
-            href="https://github.com/winterrific/poinz/blob/master/docu/manual.md"
+            href="https://github.com/Zuehlke/poinz/blob/master/docu/manual.md"
             target="_blank"
             rel="noopener noreferrer"
           >
             User Manual
           </a>{' '}
-          or get <a href="mailto:ruben@winterrific.net">in touch!</a>
-          <p>
-            Also, I&apos;m always interested in your feedback. Please open a{' '}
-            <a
-              href="https://github.com/winterrific/poinz/discussions"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Discussion on github.
-            </a>
-          </p>
         </StyledSection>
 
         <StyledSection>
