@@ -6,8 +6,6 @@ const sampleStory = {
  - Below you can estimate this story by clicking on one of the cards.
  - Invite your teammates by sharing the url with them.
 
-Please note: If a Poinz room is unused for more than two months, it will get deleted automatically!
-
-For more information, refer to the manual https://github.com/winterrific/poinz/blob/master/docu/manual.md`
+Please note: If a Poinz room is unused for more than two months, it will get deleted automatically!`
 };
 export default sampleStory;
