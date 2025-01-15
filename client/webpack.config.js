@@ -17,7 +17,6 @@ const definePlugin = new webpack.DefinePlugin({
     buildTime: Date.now(),
     changeLog: parseChangelogMd()
   }),
-  UMAMI_URL: JSON.stringify('http://localhost:9000/umami/script.js'),
   UMAMI_ID: JSON.stringify('48fd90bc-bb45-49cf-b40d-2ce65dd0b405')
 });
 
@@ -112,10 +111,6 @@ module.exports = {
       },
       '/socket.io/*': {
         target: 'http://localhost:3000',
-        secure: false
-      },
-      '/umami/*': {
-        target: 'https://umami.winterrific.net',
         secure: false
       }
     }
