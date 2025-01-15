@@ -16,7 +16,9 @@ const definePlugin = new webpack.DefinePlugin({
     vcsInfo: getGitInformation(),
     buildTime: Date.now(),
     changeLog: parseChangelogMd()
-  })
+  }),
+  UMAMI_URL: JSON.stringify('http://localhost:9000/umami/script.js'),
+  UMAMI_ID: JSON.stringify('48fd90bc-bb45-49cf-b40d-2ce65dd0b405')
 });
 
 module.exports = {
@@ -56,7 +58,7 @@ module.exports = {
       },
       {
         // load images: if filesize is lower than limit -> data-url (base64), plain url and packed file otherwise
-        test: /\.(|png|jpg|gif)$/,
+        test: /\.(png|jpg|gif)$/,
         use: {
           loader: 'url-loader',
           options: {
@@ -93,6 +95,9 @@ module.exports = {
     },
     compress: true,
     port: 9000,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
 
     devMiddleware: {
       index: true,
@@ -107,6 +112,10 @@ module.exports = {
       },
       '/socket.io/*': {
         target: 'http://localhost:3000',
+        secure: false
+      },
+      '/umami/*': {
+        target: 'https://umami.winterrific.net',
         secure: false
       }
     }

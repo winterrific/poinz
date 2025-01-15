@@ -10,7 +10,9 @@ const definePlugin = new webpack.DefinePlugin({
     version: packageInformation.version,
     buildTime: Date.now(),
     changeLog: parseChangelogMd()
-  })
+  }),
+  UMAMI_URL: JSON.stringify('https://umami.winterrific.net/script.js'),
+  UMAMI_ID: JSON.stringify('48fd90bc-bb45-49cf-b40d-2ce65dd0b405')
 });
 
 // override our default webpack config

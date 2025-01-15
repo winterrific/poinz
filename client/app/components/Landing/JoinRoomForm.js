@@ -8,6 +8,7 @@ import {getJoinUserdata} from '../../state/joining/joiningSelectors';
 import {joinIfReady} from '../../state/actions/commandActions';
 import {ROOM_ID_REGEX} from '../frontendInputValidation';
 import ValidatedInput from '../common/ValidatedInput';
+import {react_umami} from 'react-umami';
 
 import {
   StyledEyecatcher,
@@ -17,6 +18,13 @@ import {
   StyledLandingDoubleButtonWrapper,
   StyledLandingForm
 } from './_styled';
+
+/** Inti Tracker for sending usage data */
+const tracker = new react_umami(
+  UMAMI_ID,
+  window.location.hostname,
+  UMAMI_URL
+);
 
 /**
  * The form on the landing page where the user can join a room.
@@ -84,6 +92,7 @@ const JoinRoomForm = ({presetUsername, joinIfReady}) => {
   );
 
   function onTriggerJoin() {
+    tracker.trackEvent('JoinRoom');
     joinIfReady({
       roomId: customRoomId || uuid()
     });

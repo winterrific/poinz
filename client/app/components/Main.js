@@ -11,8 +11,15 @@ import RoomProtected from './Landing/RoomProtected';
 import {getOwnUserId, getUserCount} from '../state/users/usersSelectors';
 import {getRoomId} from '../state/room/roomSelectors';
 import {getJoinRoomId, getJoinUserdata, hasJoinFailedAuth} from '../state/joining/joiningSelectors';
+import {react_umami} from 'react-umami';
 
 const getNormalizedRoomId = (pathname) => (pathname ? pathname.substr(1) : '');
+/** Inti Tracker for sending usage data */
+const tracker = new react_umami(
+  UMAMI_ID,
+  window.location.hostname,
+  UMAMI_URL
+);
 
 /**
  * The Main component switches between top-level views (somewhat a basic routing).
@@ -26,14 +33,19 @@ const Main = ({
   joinRoomId
 }) => {
   if (isAppStatusUrlPath) {
+    tracker.trackView('/appstatus');
     return <AppStatus />;
   } else if (hasJoinFailedAuth) {
+    tracker.trackView('/roomprotected');
     return <RoomProtected />;
   } else if (roomDataIsLoaded) {
+    tracker.trackView('/room');
     return <Room roomId={roomId} />;
   } else if (joinRoomId && !joinUserdata.username) {
+    tracker.trackView('/user');
     return <WhoAreYou />;
   } else {
+    tracker.trackView('/');
     return <Landing />;
   }
 };
