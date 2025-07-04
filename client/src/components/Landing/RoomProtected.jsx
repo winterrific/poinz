@@ -5,7 +5,6 @@ import {L10nContext} from '../../services/l10n';
 import {joinIfReady} from '../../state/actions/commandActions';
 import {getPendingJoinCommandId} from '../../state/joining/joiningSelectors';
 import PasswordField from '../common/PasswordField';
-import GithubRibbon from './GithubRibbon';
 
 import {
   StyledEyecatcher,
@@ -50,7 +49,6 @@ const RoomProtected = () => {
 
   return (
     <StyledLanding>
-      <GithubRibbon />
       <StyledLandingInner>
         <StyledEyecatcher>
           <StyledInfoText>
