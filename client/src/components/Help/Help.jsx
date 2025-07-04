@@ -32,8 +32,7 @@ const Help = () => {
             rel="noopener noreferrer"
           >
             User Manual
-          </a>{' '}
-          or get <a href="mailto:xeronimus@gmail.com">in touch!</a>
+          </a>
           <p>
             Also, I&apos;m always interested in your feedback. Please open a{' '}
             <a
@@ -43,12 +42,6 @@ const Help = () => {
             >
               Discussion on github.
             </a>
-          </p>
-          <p>
-            <Avatar
-              user={{email: 'set@zuehlke.com', emailHash: 'd2bb0fb7ae7e208f0a2384ec08d708ef'}}
-              index={0}
-            />
           </p>
         </StyledSection>
 
