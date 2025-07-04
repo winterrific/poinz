@@ -6,9 +6,7 @@ import {L10nContext} from '../../services/l10n';
 import {getActionLog} from '../../state/actionLog/actionLogSelectors';
 import appConfig from '../../services/appConfig';
 import JoinRoomForm from './JoinRoomForm';
-import GithubRibbon from './GithubRibbon';
 import {getJoinRoomId} from '../../state/joining/joiningSelectors';
-import Changelog from '../common/Changelog';
 
 import {
   StyledActionLog,
@@ -30,7 +28,6 @@ const Landing = () => {
   if (pendingJoin) {
     return (
       <StyledLanding>
-        <GithubRibbon />
         <StyledLandingInner>
           <Loader t={t} />
         </StyledLandingInner>
@@ -40,7 +37,6 @@ const Landing = () => {
 
   return (
     <StyledLanding>
-      <GithubRibbon />
       <StyledLandingInner>
         <JoinRoomForm />
 
@@ -63,10 +59,6 @@ const Landing = () => {
             </StyledActionLog>
           </StyledEyecatcher>
         )}
-
-        <StyledEyecatcher>
-          <Changelog changelog={appConfig.changeLog} />
-        </StyledEyecatcher>
       </StyledLandingInner>
     </StyledLanding>
   );
@@ -87,6 +79,5 @@ const Loader = ({t}) => (
 Loader.propTypes = {
   t: PropTypes.func
 };
-
 
 export default Landing;
