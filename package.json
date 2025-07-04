@@ -29,7 +29,7 @@
     "glob": "^10.3.10",
     "npm-check-updates": "16.14.6",
     "prettier": "3.0.3",
-    "@mermaid-js/mermaid-cli": "^10.5.0"
+    "@mermaid-js/mermaid-cli": "^11.6.0"
   },
   "engines": {
     "node": ">=18"
