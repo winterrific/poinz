@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import {L10nContext} from '../../services/l10n';
 import {joinIfReady} from '../../state/actions/commandActions';
 import {USERNAME_REGEX} from '../frontendInputValidation';
-import GithubRibbon from './GithubRibbon';
 
 import {
   StyledEyecatcher,
@@ -41,15 +40,16 @@ const WhoAreYou = () => {
   const join = () => {
     // username length minimum is 3 characters
     if (myUsername && myUsername.length > 2) {
-      dispatch(joinIfReady({
-        username: myUsername
-      }));
+      dispatch(
+        joinIfReady({
+          username: myUsername
+        })
+      );
     }
   };
 
   return (
     <StyledLanding>
-      <GithubRibbon />
       <StyledLandingInner>
         <StyledEyecatcher>
           <StyledInfoText>
