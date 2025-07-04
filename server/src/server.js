@@ -11,7 +11,7 @@ import socketServer from './socketServer.js';
 import getLogger from './getLogger.js';
 import restApiFactory from './restApi/rest.js';
 import roomsStoreFactory from './store/roomStoreFactory.js';
-import { shutdownAnalytics } from './analytics.js';
+import {shutdownAnalytics} from './analytics.js';
 
 const LOGGER = getLogger('server');
 
