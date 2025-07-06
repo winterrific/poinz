@@ -18,6 +18,14 @@ import {
   StyledLandingForm
 } from './_styled';
 
+/** Inti Tracker for sending usage data */
+import react_umami from 'react-umami';
+const tracker = new react_umami(
+  '48fd90bc-bb45-49cf-b40d-2ce65dd0b405',
+  window.location.hostname,
+  'https://umami.winterrific.net'
+);
+
 /**
  * The form on the landing page where the user can join a room.
  * By default a new room (roomId is randomly generated in the ui).
@@ -31,6 +39,7 @@ const JoinRoomForm = () => {
   const [customRoomId, setCustomRoomId] = useState('');
 
   const onTriggerJoin = () => {
+    tracker.trackEvent('JoinRoom');
     dispatch(
       joinIfReady({
         roomId: customRoomId || uuid()
