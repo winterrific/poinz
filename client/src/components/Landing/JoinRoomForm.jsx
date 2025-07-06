@@ -23,7 +23,7 @@ import {react_umami} from 'react-umami';
 const tracker = new react_umami(
   '48fd90bc-bb45-49cf-b40d-2ce65dd0b405',
   window.location.hostname,
-  'https://umami.winterrific.net/umami.js'
+  'https://umami.winterrific.net/api/send'
 );
 
 /**
@@ -39,7 +39,7 @@ const JoinRoomForm = () => {
   const [customRoomId, setCustomRoomId] = useState('');
 
   const onTriggerJoin = () => {
-    tracker.trackEvent('JoinRoom');
+    tracker.trackEvent('JoinRoom', 'view', '/join-room');
     dispatch(
       joinIfReady({
         roomId: customRoomId || uuid()

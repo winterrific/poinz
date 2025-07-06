@@ -19,7 +19,7 @@ import {react_umami} from 'react-umami';
 const tracker = new react_umami(
   '48fd90bc-bb45-49cf-b40d-2ce65dd0b405',
   window.location.hostname,
-  'https://umami.winterrific.net/umami.js'
+  'https://umami.winterrific.net/api/send'
 );
 
 /**
@@ -38,19 +38,19 @@ const Main = () => {
   const isAppStatusUrlPath = getNormalizedRoomId(pathname) === appConfig.APP_STATUS_IDENTIFIER;
 
   if (isAppStatusUrlPath) {
-    tracker.trackView('/appstatus');
+    tracker.trackEvent('view', '', '/appstatus');
     return <AppStatus />;
   } else if (failedAuth) {
-    tracker.trackView('/roomprotected');
+    tracker.trackEvent('view', '', '/roomprotected');
     return <RoomProtected />;
   } else if (roomDataIsLoaded) {
-    tracker.trackView('/room');
+    tracker.trackEvent('view', '', '/room');
     return <Room roomId={roomId} />;
   } else if (joinRoomId && !joinUserdata.username) {
-    tracker.trackView('/user');
+    tracker.trackEvent('view', '', '/user');
     return <WhoAreYou />;
   } else {
-    tracker.trackView('/');
+    tracker.trackEvent('view', '', '/');
     return <Landing />;
   }
 };
