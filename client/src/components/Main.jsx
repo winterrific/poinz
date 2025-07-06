@@ -15,11 +15,11 @@ import {getJoinRoomId, getJoinUserdata, hasJoinFailedAuth} from '../state/joinin
 const getNormalizedRoomId = (pathname) => (pathname ? pathname.substr(1) : '');
 
 /** Inti Tracker for sending usage data */
-import react_umami from 'react-umami';
+import {react_umami} from 'react-umami';
 const tracker = new react_umami(
   '48fd90bc-bb45-49cf-b40d-2ce65dd0b405',
   window.location.hostname,
-  'https://umami.winterrific.net'
+  'https://umami.winterrific.net/umami.js'
 );
 
 /**
