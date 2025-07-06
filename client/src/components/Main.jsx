@@ -14,14 +14,6 @@ import {getJoinRoomId, getJoinUserdata, hasJoinFailedAuth} from '../state/joinin
 
 const getNormalizedRoomId = (pathname) => (pathname ? pathname.substr(1) : '');
 
-/** Inti Tracker for sending usage data */
-import {react_umami} from 'react-umami';
-const tracker = new react_umami(
-  '48fd90bc-bb45-49cf-b40d-2ce65dd0b405',
-  window.location.hostname,
-  'https://umami.winterrific.net/api/send'
-);
-
 /**
  * The Main component switches between top-level views (somewhat a basic routing).
  */
@@ -38,19 +30,18 @@ const Main = () => {
   const isAppStatusUrlPath = getNormalizedRoomId(pathname) === appConfig.APP_STATUS_IDENTIFIER;
 
   if (isAppStatusUrlPath) {
-    tracker.trackEvent('view', '', '/appstatus');
+    umami.track('status');
     return <AppStatus />;
   } else if (failedAuth) {
-    tracker.trackEvent('view', '', '/roomprotected');
+    umami.track('enter-protected');
     return <RoomProtected />;
   } else if (roomDataIsLoaded) {
-    tracker.trackEvent('view', '', '/room');
+    umami.track('enter');
     return <Room roomId={roomId} />;
   } else if (joinRoomId && !joinUserdata.username) {
-    tracker.trackEvent('view', '', '/user');
+    umami.track('user');
     return <WhoAreYou />;
   } else {
-    tracker.trackEvent('view', '', '/');
     return <Landing />;
   }
 };
