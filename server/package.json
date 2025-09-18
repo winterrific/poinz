@@ -1,6 +1,6 @@
 {
   "name": "poinz-server",
-  "version": "0.21.1x",
+  "version": "0.22",
   "description": "Distributed Planning Poker",
   "private": true,
   "author": "xeronimus@gmail.com",
@@ -36,8 +36,8 @@
     ]
   },
   "dependencies": {
-    "body-parser": "^2.0.0",
-    "dotenv": "^16.5.0",
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.2.2",
     "express": "4.21.2",
     "express-sslify": "1.2.0",
     "fastq": "1.15.0",
@@ -45,8 +45,8 @@
     "mongodb": "6.1.0",
     "nanoid": "5.0.9",
     "papaparse": "5.4.1",
-    "posthog-node": "^4.17.1",
-    "rate-limiter-flexible": "^3.0.0",
+    "posthog-node": "^5.8.4",
+    "rate-limiter-flexible": "^7.3.1",
     "socket.io": "4.8.1",
     "tv4": "1.3.0",
     "winston": "3.11.0",
@@ -60,6 +60,6 @@
     "socket.io-client": "4.7.2"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   }
 }
