@@ -1,6 +1,6 @@
 {
   "name": "poinz",
-  "version": "0.21.1x",
+  "version": "0.22",
   "description": "Distributed Planning Poker",
   "private": true,
   "author": "xeronimus@gmail.com",
@@ -20,18 +20,18 @@
     "docu:diagrams": "node docu/src/docuGenerator.mjs -- diagrams"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.2",
+    "@babel/core": "^7.28.4",
     "@mermaid-js/mermaid-cli": "^11.10.1",
-    "chalk": "^5.3.0",
-    "cross-spawn": "7.0.3",
+    "chalk": "^5.6.2",
+    "cross-spawn": "7.0.6",
     "del": "7.1.0",
-    "ejs": "^3.1.9",
-    "fs-extra": "11.1.1",
-    "glob": "^10.3.10",
+    "ejs": "^3.1.10",
+    "fs-extra": "11.3.2",
+    "glob": "^11.0.3",
     "npm-check-updates": "16.14.6",
-    "prettier": "3.0.3"
+    "prettier": "^3.6.2"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   }
 }
