@@ -9,7 +9,7 @@ services:
         - NODE_ENV=development
 
     db:
-      image: mongo:6
+      image: mongo:7
       volumes:
         - mongo_volume:/data/db
       healthcheck:
