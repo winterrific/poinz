@@ -5,6 +5,7 @@ import http from 'http';
 import * as url from 'url';
 import express from 'express';
 import sslifyEnforce from 'express-sslify';
+import {rateLimit} from 'express-rate-limit';
 
 import settings from './settings.js';
 import socketServer from './socketServer.js';
@@ -29,6 +30,18 @@ async function startup() {
     app.use(sslifyEnforce.HTTPS({trustProtoHeader: true}));
   }
 
+  // Init rate limiter for express, might be duplicate since the socket is already rate limited.
+  const limiter = rateLimit({
+    windowMs: 1000,
+    limit: 6,
+    standardHeaders: 'draft-8',
+    legacyHeaders: false,
+    ipv6Subnet: 56
+  });
+
+  // Apply the rate limiting middleware to all requests.
+  app.use(limiter);
+
   // setup REST api
   restApiFactory(app, store);
 
@@ -38,7 +51,7 @@ async function startup() {
   app.use(express.static(path.resolve(__dirname, '../public')));
 
   // enable html5 history mode by "forwarding" every unmatched route to the index.html file
-  app.get('*', (request, response) =>
+  app.get('/{*splat}', (request, response) =>
     response.sendFile(path.resolve(__dirname, '../public/index.html'))
   );
 
