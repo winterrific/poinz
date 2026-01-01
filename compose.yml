@@ -1,0 +1,22 @@
+services:
+    poinz:
+      build: .
+      image: poinz
+      ports:
+        - "3000:3000"
+      environment:
+        - ATLAS_DB_URI=mongodb://db:27017
+        - NODE_ENV=development
+
+    db:
+      image: mongo:7
+      volumes:
+        - mongo_volume:/data/db
+      healthcheck:
+        test: echo 'db.stats().ok' | mongosh db:27017/test --quiet
+        interval: 10s
+        timeout: 10s
+        retries: 5
+
+volumes:
+  mongo_volume:
