@@ -5,6 +5,7 @@ import http from 'http';
 import * as url from 'url';
 import express from 'express';
 import sslifyEnforce from 'express-sslify';
+import {rateLimit} from 'express-rate-limit';
 
 import settings from './settings.js';
 import socketServer from './socketServer.js';
@@ -28,6 +29,18 @@ async function startup() {
     LOGGER.info('enabling HTTPS enforce...');
     app.use(sslifyEnforce.HTTPS({trustProtoHeader: true}));
   }
+
+  // Init rate limiter for express, might be duplicate since the socket is already rate limited.
+  const limiter = rateLimit({
+    windowMs: 1000,
+    limit: 6,
+    standardHeaders: 'draft-8',
+    legacyHeaders: false,
+    ipv6Subnet: 56
+  });
+
+  // Apply the rate limiting middleware to all requests.
+  app.use(limiter);
 
   // setup REST api
   restApiFactory(app, store);
