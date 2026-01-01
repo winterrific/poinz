@@ -38,7 +38,7 @@ async function startup() {
   app.use(express.static(path.resolve(__dirname, '../public')));
 
   // enable html5 history mode by "forwarding" every unmatched route to the index.html file
-  app.get('*', (request, response) =>
+  app.get('/{*splat},', (request, response) =>
     response.sendFile(path.resolve(__dirname, '../public/index.html'))
   );
 
