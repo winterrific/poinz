@@ -17,14 +17,14 @@
   ],
   "license": "ISC",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "devDependencies": {
-    "cypress": "^15.8.1",
+    "cypress": "15.8.1",
     "nanoid": "5.1.6",
-    "typescript": "^5.9.3"
+    "typescript": "5.9.3"
   },
   "dependencies": {
-    "socket.io-client": "4.8.1"
+    "socket.io-client": "4.8.3"
   }
 }
